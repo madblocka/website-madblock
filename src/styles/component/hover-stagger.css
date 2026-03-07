@@ -1,0 +1,26 @@
+[data-hover-stagger] {
+  overflow: hidden;
+  position: relative;
+}
+
+[data-hover-stagger] .stagger-inner {
+  display: inline-flex;
+}
+
+[data-hover-stagger] .char-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  line-height: 1.2;
+  height: 1.2em;
+}
+
+[data-hover-stagger] .char-wrap span {
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+}
+
+[data-hover-stagger]:hover .char-wrap span {
+  transform: translateY(-100%);
+}

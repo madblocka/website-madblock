@@ -1,0 +1,15 @@
+{
+  "name": "madblock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "build:css": "concat-cli -f src/styles/global.css -o dist/styles.css && cleancss -o dist/styles.min.css dist/styles.css",
+  "build:js": "concat-cli -f src/scripts/app.js -o dist/app.js && esbuild dist/app.js --minify --outfile=dist/app.min.js",
+  "build": "npm-run-all build:css build:js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
